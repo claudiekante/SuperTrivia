@@ -8,6 +8,7 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/main_textview_welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Welcome. What's your name?!"
@@ -17,6 +18,7 @@
         />
 
     <EditText
+        android:id="@+id/main_edittext_yourname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -25,6 +27,7 @@
 
         />
     <Button
+        android:id="@+id/main_button_play"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Let's Play"
@@ -40,4 +43,4 @@
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
