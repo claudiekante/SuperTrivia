@@ -1,8 +1,7 @@
-package org.alessandrobarile.supertrivia;
+package org.alessandrobarile.supertrivia.controller;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
@@ -12,7 +11,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import org.alessandrobarile.supertrivia.R;
+import org.alessandrobarile.supertrivia.model.model.User;
+
 public class MainActivity extends AppCompatActivity {
+
+    // creo l'attributo da riempire col nome che si scrive
+   // private String mUser;
 
 
 //    ici il faut brancher les element graphique
@@ -54,8 +59,11 @@ public class MainActivity extends AppCompatActivity {
         mPlayButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent gameActivityIntent = new Intent(MainActivity.this, GameActivity.class);
                 startActivity (gameActivityIntent);
+                User mUser = null;
+                mUser.setmFirstName(mNameEditText.getText().toString());
             }
         });
 
